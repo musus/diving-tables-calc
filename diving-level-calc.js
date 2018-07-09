@@ -372,14 +372,17 @@ function diveLevelNew() {
         if (restTime >= 395) {
             var newLevel = "A";
         }
-        if (restTime <= 394 && restTime >= 205) {
+        if (restTime <= 394 && restTime >= 215) {
             var newLevel = "B";
         }
-        if (restTime <= 204 && restTime >= 55) {
+        if (restTime <= 214 && restTime >= 108) {
             var newLevel = "C";
         }
-        if (restTime <= 54) {
+        if (restTime <= 107 && restTime >= 55) {
             var newLevel = "D";
+        }
+        if (restTime <= 54) {
+            var newLevel = "E";
         }
     }
 
