@@ -466,23 +466,250 @@ function calcRNT() {
 
     if (newLevel === "A") {
 
-
         if (metre <= 12) {
             var rnt = 7;
         }
-        if (metre >= 13 && metre <= 15) {
+        if (metre <= 15 && metre >= 13) {
             var rnt = 6;
         }
-        if (metre >= 16 && metre <= 18) {
+        if (metre <= 18 && metre >= 16) {
             var rnt = 5;
         }
-        if (metre >= 19 && metre <= 24) {
+        if (metre <= 24 && metre >= 19) {
             var rnt = 4;
         }
-        if (metre >= 25 && metre <= 40) {
+        if (metre <= 40 && metre >= 25) {
             var rnt = 3;
         }
     }
+
+    if (newLevel === "B") {
+
+        if (metre <= 12) {
+            var rnt = 17;
+        }
+        if (metre <= 15 && metre >= 13) {
+            var rnt = 13;
+        }
+        if (metre <= 18 && metre >= 16) {
+            var rnt = 11;
+        }
+        if (metre <= 21 && metre >= 19) {
+            var rnt = 9;
+        }
+        if (metre <= 24 && metre >= 22) {
+            var rnt = 8;
+        }
+        if (metre <= 30 && metre >= 25) {
+            var rnt = 7;
+        }
+        if (metre <= 40 && metre >= 31) {
+            var rnt = 6;
+        }
+    }
+
+    if (newLevel === "C") {
+
+        if (metre <= 12) {
+            var rnt = 25;
+        }
+        if (metre <= 15 && metre >= 13) {
+            var rnt = 21;
+        }
+        if (metre <= 18 && metre >= 16) {
+            var rnt = 17;
+        }
+        if (metre <= 21 && metre >= 19) {
+            var rnt = 15;
+        }
+        if (metre <= 24 && metre >= 22) {
+            var rnt = 13;
+        }
+        if (metre <= 27 && metre >= 25) {
+            var rnt = 11;
+        }
+        if (metre <= 33 && metre >= 28) {
+            var rnt = 10;
+        }
+        if (metre <= 36 && metre >= 34) {
+            var rnt = 9;
+        }
+        if (metre <= 40 && metre >= 37) {
+            var rnt = 8;
+        }
+    }
+
+    if (newLevel === "D") {
+
+        if (metre <= 12) {
+            var rnt = 37;
+        }
+        if (metre <= 15 && metre >= 13) {
+            var rnt = 29;
+        }
+        if (metre <= 18 && metre >= 16) {
+            var rnt = 24;
+        }
+        if (metre <= 21 && metre >= 19) {
+            var rnt = 20;
+        }
+        if (metre <= 24 && metre >= 22) {
+            var rnt = 18;
+        }
+        if (metre <= 27 && metre >= 25) {
+            var rnt = 16;
+        }
+        if (metre <= 30 && metre >= 28) {
+            var rnt = 14;
+        }
+        if (metre <= 33 && metre >= 31) {
+            var rnt = 13;
+        }
+        if (metre <= 36 && metre >= 34) {
+            var rnt =12;
+        }
+        if (metre <= 40 && metre >= 37) {
+            var rnt = 11;
+        }
+    }
+
+    if (newLevel === "E") {
+
+        if (metre <= 12) {
+            var rnt = 49;
+        }
+        if (metre <= 15 && metre >= 13) {
+            var rnt = 38;
+        }
+        if (metre <= 18 && metre >= 16) {
+            var rnt = 30;
+        }
+        if (metre <= 21 && metre >= 19) {
+            var rnt = 26;
+        }
+        if (metre <= 24 && metre >= 22) {
+            var rnt = 23;
+        }
+        if (metre <= 27 && metre >= 25) {
+            var rnt = 20;
+        }
+        if (metre <= 30 && metre >= 28) {
+            var rnt = 18;
+        }
+        if (metre <= 33 && metre >= 31) {
+            var rnt = 16;
+        }
+        if (metre <= 36 && metre >= 34) {
+            var rnt = 15;
+        }
+        if (metre <= 40 && metre >= 37) {
+            var rnt = 13;
+        }
+    }
+
+    if (newLevel === "F") {
+
+        if (metre <= 12) {
+            var rnt = 61;
+        }
+        if (metre <= 15 && metre >= 13) {
+            var rnt = 47;
+        }
+        if (metre <= 18 && metre >= 16) {
+            var rnt = 36;
+        }
+        if (metre <= 21 && metre >= 19) {
+            var rnt = 31;
+        }
+        if (metre <= 24 && metre >= 22) {
+            var rnt = 28;
+        }
+        if (metre <= 27 && metre >= 25) {
+            var rnt = 24;
+        }
+        if (metre <= 30 && metre >= 28) {
+            var rnt = 22;
+        }
+        if (metre <= 33 && metre >= 31) {
+            var rnt = 20;
+        }
+        if (metre <= 36 && metre >= 34) {
+            var rnt = 18;
+        }
+        if (metre <= 40 && metre >= 37) {
+            var rnt = 16;
+        }
+    }
+
+    if (newLevel === "G") {
+
+        if (metre <= 12) {
+            var rnt = 73;
+        }
+        if (metre <= 15 && metre >= 13) {
+            var rnt = 56;
+        }
+        if (metre <= 18 && metre >= 16) {
+            var rnt = 44;
+        }
+        if (metre <= 21 && metre >= 19) {
+            var rnt = 37;
+        }
+        if (metre <= 24 && metre >= 22) {
+            var rnt = 32;
+        }
+        if (metre <= 27 && metre >= 25) {
+            var rnt = 29;
+        }
+        if (metre <= 30 && metre >= 28) {
+            var rnt = 26;
+        }
+        if (metre <= 33 && metre >= 31) {
+            var rnt = 24;
+        }
+        if (metre <= 36 && metre >= 34) {
+            var rnt = 21;
+        }
+        if (metre <= 40 && metre >= 37) {
+            var rnt = 19;
+        }
+    }
+
+    if (newLevel === "H") {
+
+        if (metre <= 12) {
+            var rnt = 87;
+        }
+        if (metre <= 15 && metre >= 13) {
+            var rnt = 66;
+        }
+        if (metre <= 18 && metre >= 16) {
+            var rnt = 52;
+        }
+        if (metre <= 21 && metre >= 19) {
+            var rnt = 43;
+        }
+        if (metre <= 24 && metre >= 22) {
+            var rnt = 38;
+        }
+        if (metre <= 27 && metre >= 25) {
+            var rnt = 33;
+        }
+        if (metre <= 30 && metre >= 28) {
+            var rnt = 30;
+        }
+        if (metre <= 33 && metre >= 31) {
+            var rnt = 27;
+        }
+        if (metre <= 36 && metre >= 34) {
+            var rnt = 25;
+        }
+        if (metre <= 40 && metre >= 37) {
+            var rnt = 22;
+        }
+    }
+
+
 
     document.getElementById('rnt').value = rnt;
 
