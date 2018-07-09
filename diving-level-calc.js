@@ -461,7 +461,7 @@ function diveLevelNew() {
 }
 
 function calcRNT() {
-    const metre = document.getElementById('metre').value;
+    const metre = document.getElementById('newMetre').value;
     const newLevel = document.getElementById('newLevel').value;
 
     if (newLevel === "A") {
