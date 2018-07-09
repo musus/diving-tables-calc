@@ -42,7 +42,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 15 && metre > 13) {
+    if (metre <= 15 && metre >= 13) {
         if (time <= 10) {
             var level = "B";
         }
@@ -72,7 +72,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 18 && metre > 16) {
+    if (metre <= 18 && metre >= 16) {
         if (time <= 10) {
             var level = "B";
         }
@@ -105,7 +105,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 21 && metre > 19) {
+    if (metre <= 21 && metre >= 19) {
         if (time <= 5) {
             var level = "B";
         }
@@ -138,7 +138,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 21 && metre > 19) {
+    if (metre <= 21 && metre >= 19) {
         if (time <= 5) {
             var level = "B";
         }
@@ -174,7 +174,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 24 && metre > 22) {
+    if (metre <= 24 && metre >= 22) {
         if (time <= 5) {
             var level = "B";
         }
@@ -207,7 +207,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 27 && metre > 25) {
+    if (metre <= 27 && metre >= 25) {
         if (time <= 5) {
             var level = "B";
         }
@@ -237,7 +237,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 30 && metre > 28) {
+    if (metre <= 30 && metre >= 28) {
         if (time <= 5) {
             var level = "B";
         }
@@ -264,7 +264,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 33 && metre > 31) {
+    if (metre <= 33 && metre >= 31) {
         if (time <= 5) {
             var level = "C";
         }
@@ -288,7 +288,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 36 && metre > 34) {
+    if (metre <= 36 && metre >= 34) {
         if (time <= 5) {
             var level = "C";
         }
@@ -306,7 +306,7 @@ function diveLevelCalc() {
         }
     }
 
-    if (metre <= 36 && metre > 34) {
+    if (metre <= 36 && metre >= 34) {
         if (time <= 5) {
             var level = "C";
         }
@@ -321,6 +321,47 @@ function diveLevelCalc() {
         }
     }
 
-    document.getElementById('level').innerHTML = level;
+    document.getElementById('level').value = level;
+
+}
+
+function diveLevelNew() {
+    const level = document.getElementById('level').value;
+    const restTime = document.getElementById('rest').value;
+
+    if (level === "A") {
+        var newLevel = "A";
+    }
+
+
+    document.getElementById('newLevel').value = newLevel;
+
+}
+
+function calcRNT() {
+    const metre = document.getElementById('metre').value;
+    const newLevel = document.getElementById('newLevel').value;
+
+    if (newLevel === "A") {
+
+
+        if (metre <= 12) {
+            var rnt = 7;
+        }
+        if (metre >= 13 && metre <= 15) {
+            var rnt = 6;
+        }
+        if (metre >= 16 && metre <= 18) {
+            var rnt = 5;
+        }
+        if (metre >= 19 && metre <= 24) {
+            var rnt = 4;
+        }
+        if (metre >= 25 && metre <= 40) {
+            var rnt = 3;
+        }
+    }
+
+    document.getElementById('rnt').value = rnt;
 
 }

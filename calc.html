@@ -5,7 +5,7 @@
 	<title>Diving Tables Calc</title>
 	<style>
 		.container {
-			width: 500px;
+			width: 1200px;
 		}
 
 	</style>
@@ -13,10 +13,25 @@
 <script src="diving-level-calc.js"></script>
 <body>
 <div class="container">
-	潜水深度 : <input id="metre" type="number">
-	潜水時間 : <input id="time" type="number">
-	<button onclick="diveLevelCalc()">レベルの計算</button>
-	<div>レベル : <span id="level"></span></div>
+	<div class="diving-level">
+		潜水深度 : <input id="metre" type="number" min="0">
+		潜水時間 : <input id="time" type="number" min="0">
+		レベル : <input id="level" type="text">
+		<button onclick="diveLevelCalc()">レベルの計算</button>
+	</div>
+	<hr/>
+	<div class="diving-rest">
+		休憩時間 : <input id="rest" type="number" min="0">
+		新しいレベル : <input id="newLevel" type="text">
+		<button onclick="diveLevelNew()">レベルの計算</button>
+	</div>
+	<hr/>
+	<div class="repDiving">
+		RNT : <input id="rnt" type="number" min="0">
+		ADT : <input id="adt" type="number" min="0">
+		TNT : <input id="tnt" type="number" min="0">
+		<button onclick="calcRNT()"> 計算する</button>
+	</div>
 
 
 </div>
