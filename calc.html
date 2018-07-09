@@ -16,21 +16,21 @@
 	<div class="diving-level">
 		潜水深度 : <input id="metre" type="number" min="0">
 		潜水時間 : <input id="time" type="number" min="0">
-		レベル : <input id="level" type="text">
 		<button onclick="diveLevelCalc()">レベルの計算</button>
+		レベル : <input id="level" type="text">
 	</div>
 	<hr/>
 	<div class="diving-rest">
 		休憩時間 : <input id="rest" type="number" min="0">
-		新しいレベル : <input id="newLevel" type="text">
 		<button onclick="diveLevelNew()">レベルの計算</button>
+		新しいレベル : <input id="newLevel" type="text">
 	</div>
 	<hr/>
 	<div class="repDiving">
+		<button onclick="calcRNT()"> 残留窒素の計算する</button>
 		RNT : <input id="rnt" type="number" min="0">
 		ADT : <input id="adt" type="number" min="0">
 		TNT : <input id="tnt" type="number" min="0">
-		<button onclick="calcRNT()"> 計算する</button>
 	</div>
 
 
