@@ -333,6 +333,128 @@ function diveLevelNew() {
         var newLevel = "A";
     }
 
+    if (level === "B") {
+        if (restTime >= 201) {
+            var newLevel = "A";
+        } else {
+            var newLevel = "B";
+        }
+    }
+
+    if (level === "C") {
+        if (restTime >= 290) {
+            var newLevel = "A";
+        }
+        if (restTime <= 289 && restTime >= 100) {
+            var newLevel = "B";
+        }
+        if (restTime <= 100) {
+            var newLevel = "C";
+        }
+    }
+
+    if (level === "D") {
+        if (restTime >= 349) {
+            var newLevel = "A";
+        }
+        if (restTime <= 348 && restTime >= 159) {
+            var newLevel = "B";
+        }
+        if (restTime <= 158 && restTime >= 70) {
+            var newLevel = "C";
+        }
+        if (restTime <= 69) {
+            var newLevel = "D";
+        }
+    }
+
+    if (level === "E") {
+        if (restTime >= 395) {
+            var newLevel = "A";
+        }
+        if (restTime <= 394 && restTime >= 205) {
+            var newLevel = "B";
+        }
+        if (restTime <= 204 && restTime >= 55) {
+            var newLevel = "C";
+        }
+        if (restTime <= 54) {
+            var newLevel = "D";
+        }
+    }
+
+    if (level === "F") {
+        if (restTime >= 426) {
+            var newLevel = "A";
+        }
+        if (restTime <= 425 && restTime >= 238) {
+            var newLevel = "B";
+        }
+        if (restTime <= 237 && restTime >= 149) {
+            var newLevel = "C";
+        }
+        if (restTime <= 148 && restTime >= 90) {
+            var newLevel = "D";
+        }
+        if (restTime <= 89 && restTime >= 46) {
+            var newLevel = "E";
+        }
+        if (restTime <= 45) {
+            var newLevel = "F";
+        }
+    }
+
+    if (level === "G") {
+        if (restTime >= 456) {
+            var newLevel = "A";
+        }
+        if (restTime <= 455 && restTime >= 266) {
+            var newLevel = "B";
+        }
+        if (restTime <= 265 && restTime >= 179) {
+            var newLevel = "C";
+        }
+        if (restTime <= 178 && restTime >= 120) {
+            var newLevel = "D";
+        }
+        if (restTime <= 119 && restTime >= 76) {
+            var newLevel = "E";
+        }
+        if (restTime <= 75 && restTime >= 41) {
+            var newLevel = "F";
+        }
+        if (restTime <= 40) {
+            var newLevel = "G";
+        }
+    }
+
+    if (level === "H") {
+        if (restTime >= 480) {
+            var newLevel = "A";
+        }
+        if (restTime <= 479 && restTime >= 266) {
+            var newLevel = "B";
+        }
+        if (restTime <= 265 && restTime >= 201) {
+            var newLevel = "C";
+        }
+        if (restTime <= 200 && restTime >= 144) {
+            var newLevel = "D";
+        }
+        if (restTime <= 143 && restTime >= 102) {
+            var newLevel = "E";
+        }
+        if (restTime <= 101 && restTime >= 67) {
+            var newLevel = "F";
+        }
+        if (restTime <= 66 && restTime >= 37) {
+            var newLevel = "G";
+        }
+        if (restTime <= 36) {
+            var newLevel = "H";
+        }
+    }
+
 
     document.getElementById('newLevel').value = newLevel;
 
