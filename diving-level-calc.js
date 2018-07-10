@@ -1,8 +1,15 @@
 const getLevel = (time, start, end) => {
   let level
   const levels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
+
+  if (meter <= 12) {
+    times = [5, 15, 25, 30, 40, 50, 70, 80, 100, 110, 130, 150]
+  } else if (meter <= 15) {
+    times =
+  }
+
   levels.slice(start, end)
-  if (levels.includes('a') && time <= 5) {
+  if (levels.includes('a') && time <= times[0]) {
     level = 'A'
   }
   if (levels.includes('b') && time > 5 && time <= 15) {
