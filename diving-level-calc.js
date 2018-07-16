@@ -1,11 +1,11 @@
-const getLevel = (time, start, end) => {
+const getLevel = (time, meter, start, end) => {
   let level
   const levels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
 
   if (meter <= 12) {
     times = [5, 15, 25, 30, 40, 50, 70, 80, 100, 110, 130, 150]
   } else if (meter <= 15) {
-    times =
+    times = [0, 10, 15, 25, 30, 40, 50, 60, 70, 80, 0,100]
   }
 
   levels.slice(start, end)
@@ -49,15 +49,15 @@ const getLevel = (time, start, end) => {
 }
 
 function diveLevelCalc() {
-  const metre = document.getElementById('metre').value
+  const meter = document.getElementById('meter').value
   const time = document.getElementById('time').value
   let level
 
-  if (metre <= 12) {
-    level = getLevel(time, 0, 13)
+  if (meter <= 12) {
+    level = getLevel(time, meter, 0, 13)
   }
 
-  if (metre <= 15 && metre >= 13) {
+  if (meter <= 15 && meter >= 13) {
     if (time <= 10) {
       level = 'B'
     }
@@ -87,7 +87,7 @@ function diveLevelCalc() {
     }
   }
 
-  if (metre <= 18 && metre >= 16) {
+  if (meter <= 18 && meter >= 16) {
     if (time <= 10) {
       level = 'B'
     }
@@ -120,7 +120,7 @@ function diveLevelCalc() {
     }
   }
 
-  if (metre <= 21 && metre >= 19) {
+  if (meter <= 21 && meter >= 19) {
     if (time <= 5) {
       level = 'B'
     }
@@ -153,7 +153,7 @@ function diveLevelCalc() {
     }
   }
 
-  if (metre <= 21 && metre >= 19) {
+  if (meter <= 21 && meter >= 19) {
     if (time <= 5) {
       level = 'B'
     }
@@ -189,7 +189,7 @@ function diveLevelCalc() {
     }
   }
 
-  if (metre <= 24 && metre >= 22) {
+  if (meter <= 24 && meter >= 22) {
     if (time <= 5) {
       level = 'B'
     }
@@ -222,7 +222,7 @@ function diveLevelCalc() {
     }
   }
 
-  if (metre <= 27 && metre >= 25) {
+  if (meter <= 27 && meter >= 25) {
     if (time <= 5) {
       level = 'B'
     }
@@ -252,7 +252,7 @@ function diveLevelCalc() {
     }
   }
 
-  if (metre <= 30 && metre >= 28) {
+  if (meter <= 30 && meter >= 28) {
     if (time <= 5) {
       level = 'B'
     }
@@ -279,7 +279,7 @@ function diveLevelCalc() {
     }
   }
 
-  if (metre <= 33 && metre >= 31) {
+  if (meter <= 33 && meter >= 31) {
     if (time <= 5) {
       level = 'C'
     }
@@ -303,7 +303,7 @@ function diveLevelCalc() {
     }
   }
 
-  if (metre <= 36 && metre >= 34) {
+  if (meter <= 36 && meter >= 34) {
     if (time <= 5) {
       level = 'C'
     }
@@ -321,7 +321,7 @@ function diveLevelCalc() {
     }
   }
 
-  if (metre <= 36 && metre >= 34) {
+  if (meter <= 36 && meter >= 34) {
     if (time <= 5) {
       level = 'C'
     }
@@ -476,242 +476,242 @@ function diveLevelNew() {
 }
 
 function calcRNT() {
-  const metre = document.getElementById('newMetre').value
+  const meter = document.getElementById('newmeter').value
   const newLevel = document.getElementById('newLevel').value
 
   if (newLevel === 'A') {
-    if (metre <= 12) {
+    if (meter <= 12) {
       rnt = 7
     }
-    if (metre <= 15 && metre >= 13) {
+    if (meter <= 15 && meter >= 13) {
       rnt = 6
     }
-    if (metre <= 18 && metre >= 16) {
+    if (meter <= 18 && meter >= 16) {
       rnt = 5
     }
-    if (metre <= 24 && metre >= 19) {
+    if (meter <= 24 && meter >= 19) {
       rnt = 4
     }
-    if (metre <= 40 && metre >= 25) {
+    if (meter <= 40 && meter >= 25) {
       rnt = 3
     }
   }
 
   if (newLevel === 'B') {
-    if (metre <= 12) {
+    if (meter <= 12) {
       rnt = 17
     }
-    if (metre <= 15 && metre >= 13) {
+    if (meter <= 15 && meter >= 13) {
       rnt = 13
     }
-    if (metre <= 18 && metre >= 16) {
+    if (meter <= 18 && meter >= 16) {
       rnt = 11
     }
-    if (metre <= 21 && metre >= 19) {
+    if (meter <= 21 && meter >= 19) {
       rnt = 9
     }
-    if (metre <= 24 && metre >= 22) {
+    if (meter <= 24 && meter >= 22) {
       rnt = 8
     }
-    if (metre <= 30 && metre >= 25) {
+    if (meter <= 30 && meter >= 25) {
       rnt = 7
     }
-    if (metre <= 40 && metre >= 31) {
+    if (meter <= 40 && meter >= 31) {
       rnt = 6
     }
   }
 
   if (newLevel === 'C') {
-    if (metre <= 12) {
+    if (meter <= 12) {
       rnt = 25
     }
-    if (metre <= 15 && metre >= 13) {
+    if (meter <= 15 && meter >= 13) {
       rnt = 21
     }
-    if (metre <= 18 && metre >= 16) {
+    if (meter <= 18 && meter >= 16) {
       rnt = 17
     }
-    if (metre <= 21 && metre >= 19) {
+    if (meter <= 21 && meter >= 19) {
       rnt = 15
     }
-    if (metre <= 24 && metre >= 22) {
+    if (meter <= 24 && meter >= 22) {
       rnt = 13
     }
-    if (metre <= 27 && metre >= 25) {
+    if (meter <= 27 && meter >= 25) {
       rnt = 11
     }
-    if (metre <= 33 && metre >= 28) {
+    if (meter <= 33 && meter >= 28) {
       rnt = 10
     }
-    if (metre <= 36 && metre >= 34) {
+    if (meter <= 36 && meter >= 34) {
       rnt = 9
     }
-    if (metre <= 40 && metre >= 37) {
+    if (meter <= 40 && meter >= 37) {
       rnt = 8
     }
   }
 
   if (newLevel === 'D') {
-    if (metre <= 12) {
+    if (meter <= 12) {
       rnt = 37
     }
-    if (metre <= 15 && metre >= 13) {
+    if (meter <= 15 && meter >= 13) {
       rnt = 29
     }
-    if (metre <= 18 && metre >= 16) {
+    if (meter <= 18 && meter >= 16) {
       rnt = 24
     }
-    if (metre <= 21 && metre >= 19) {
+    if (meter <= 21 && meter >= 19) {
       rnt = 20
     }
-    if (metre <= 24 && metre >= 22) {
+    if (meter <= 24 && meter >= 22) {
       rnt = 18
     }
-    if (metre <= 27 && metre >= 25) {
+    if (meter <= 27 && meter >= 25) {
       rnt = 16
     }
-    if (metre <= 30 && metre >= 28) {
+    if (meter <= 30 && meter >= 28) {
       rnt = 14
     }
-    if (metre <= 33 && metre >= 31) {
+    if (meter <= 33 && meter >= 31) {
       rnt = 13
     }
-    if (metre <= 36 && metre >= 34) {
+    if (meter <= 36 && meter >= 34) {
       rnt = 12
     }
-    if (metre <= 40 && metre >= 37) {
+    if (meter <= 40 && meter >= 37) {
       rnt = 11
     }
   }
 
   if (newLevel === 'E') {
-    if (metre <= 12) {
+    if (meter <= 12) {
       rnt = 49
     }
-    if (metre <= 15 && metre >= 13) {
+    if (meter <= 15 && meter >= 13) {
       rnt = 38
     }
-    if (metre <= 18 && metre >= 16) {
+    if (meter <= 18 && meter >= 16) {
       rnt = 30
     }
-    if (metre <= 21 && metre >= 19) {
+    if (meter <= 21 && meter >= 19) {
       rnt = 26
     }
-    if (metre <= 24 && metre >= 22) {
+    if (meter <= 24 && meter >= 22) {
       rnt = 23
     }
-    if (metre <= 27 && metre >= 25) {
+    if (meter <= 27 && meter >= 25) {
       rnt = 20
     }
-    if (metre <= 30 && metre >= 28) {
+    if (meter <= 30 && meter >= 28) {
       rnt = 18
     }
-    if (metre <= 33 && metre >= 31) {
+    if (meter <= 33 && meter >= 31) {
       rnt = 16
     }
-    if (metre <= 36 && metre >= 34) {
+    if (meter <= 36 && meter >= 34) {
       rnt = 15
     }
-    if (metre <= 40 && metre >= 37) {
+    if (meter <= 40 && meter >= 37) {
       rnt = 13
     }
   }
 
   if (newLevel === 'F') {
-    if (metre <= 12) {
+    if (meter <= 12) {
       rnt = 61
     }
-    if (metre <= 15 && metre >= 13) {
+    if (meter <= 15 && meter >= 13) {
       rnt = 47
     }
-    if (metre <= 18 && metre >= 16) {
+    if (meter <= 18 && meter >= 16) {
       rnt = 36
     }
-    if (metre <= 21 && metre >= 19) {
+    if (meter <= 21 && meter >= 19) {
       rnt = 31
     }
-    if (metre <= 24 && metre >= 22) {
+    if (meter <= 24 && meter >= 22) {
       rnt = 28
     }
-    if (metre <= 27 && metre >= 25) {
+    if (meter <= 27 && meter >= 25) {
       rnt = 24
     }
-    if (metre <= 30 && metre >= 28) {
+    if (meter <= 30 && meter >= 28) {
       rnt = 22
     }
-    if (metre <= 33 && metre >= 31) {
+    if (meter <= 33 && meter >= 31) {
       rnt = 20
     }
-    if (metre <= 36 && metre >= 34) {
+    if (meter <= 36 && meter >= 34) {
       rnt = 18
     }
-    if (metre <= 40 && metre >= 37) {
+    if (meter <= 40 && meter >= 37) {
       rnt = 16
     }
   }
 
   if (newLevel === 'G') {
-    if (metre <= 12) {
+    if (meter <= 12) {
       rnt = 73
     }
-    if (metre <= 15 && metre >= 13) {
+    if (meter <= 15 && meter >= 13) {
       rnt = 56
     }
-    if (metre <= 18 && metre >= 16) {
+    if (meter <= 18 && meter >= 16) {
       rnt = 44
     }
-    if (metre <= 21 && metre >= 19) {
+    if (meter <= 21 && meter >= 19) {
       rnt = 37
     }
-    if (metre <= 24 && metre >= 22) {
+    if (meter <= 24 && meter >= 22) {
       rnt = 32
     }
-    if (metre <= 27 && metre >= 25) {
+    if (meter <= 27 && meter >= 25) {
       rnt = 29
     }
-    if (metre <= 30 && metre >= 28) {
+    if (meter <= 30 && meter >= 28) {
       rnt = 26
     }
-    if (metre <= 33 && metre >= 31) {
+    if (meter <= 33 && meter >= 31) {
       rnt = 24
     }
-    if (metre <= 36 && metre >= 34) {
+    if (meter <= 36 && meter >= 34) {
       rnt = 21
     }
-    if (metre <= 40 && metre >= 37) {
+    if (meter <= 40 && meter >= 37) {
       rnt = 19
     }
   }
 
   if (newLevel === 'H') {
-    if (metre <= 12) {
+    if (meter <= 12) {
       rnt = 87
     }
-    if (metre <= 15 && metre >= 13) {
+    if (meter <= 15 && meter >= 13) {
       rnt = 66
     }
-    if (metre <= 18 && metre >= 16) {
+    if (meter <= 18 && meter >= 16) {
       rnt = 52
     }
-    if (metre <= 21 && metre >= 19) {
+    if (meter <= 21 && meter >= 19) {
       rnt = 43
     }
-    if (metre <= 24 && metre >= 22) {
+    if (meter <= 24 && meter >= 22) {
       rnt = 38
     }
-    if (metre <= 27 && metre >= 25) {
+    if (meter <= 27 && meter >= 25) {
       rnt = 33
     }
-    if (metre <= 30 && metre >= 28) {
+    if (meter <= 30 && meter >= 28) {
       rnt = 30
     }
-    if (metre <= 33 && metre >= 31) {
+    if (meter <= 33 && meter >= 31) {
       rnt = 27
     }
-    if (metre <= 36 && metre >= 34) {
+    if (meter <= 36 && meter >= 34) {
       rnt = 25
     }
-    if (metre <= 40 && metre >= 37) {
+    if (meter <= 40 && meter >= 37) {
       rnt = 22
     }
   }
